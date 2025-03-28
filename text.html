@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Messages</title>
+    <style>
+        body {
+            background-color: #ffc0cb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        h1 {
+            font-size: 2em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.8);
+        }
+        .message-container {
+            width: 80%;
+            height: 60vh;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-y: auto;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+            white-space: pre-line;
+        }
+        .back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            background-color: hotpink;
+            color: white;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Messages</h1>
+    <div class="message-container">
+        <p>
+            Ayyayayayayayayayayayaya itsss thatt timeee of the yearrrr!!!!😭🫶🏻😭🫶🏻😭
+            Uffieeeee heheheeh 29thhh yayayyayayayyyyyy ahm ahm wapis insaan banta hon😋
+            ...
+            Five years bubba, and what a journey it has been. Life has thrown its storms our way, 
+            testing us with distance, challenges, and idfk what not. Yet, through every twist and turn, 
+            our hands have remained intertwined, and um romatically speaking our hearts beating as one.
+            ...
+            I love you the most-Always and forever🫶🏻💋💞🪢🌹😘✨
+        </p>
+    </div>
+    
+    <button class="back-btn" onclick="goBack()">Back</button>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
