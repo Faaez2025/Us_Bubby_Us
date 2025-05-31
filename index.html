@@ -1,74 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 5th Anniversary</title>
-    <style>
-        body {
-            background-color: #ffc0cb;
-            text-align: center;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: white;
-            text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.8);
-        }
-        .button {
-            margin: 20px;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border: none;
-            border-radius: 10px;
-            background-color: hotpink;
-            color: white;
-            cursor: pointer;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s;
-        }
-        .button:hover {
-            transform: scale(1.1);
-        }
-        .emoji {
-            position: absolute;
-            font-size: 2em;
-            opacity: 0.8;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            from { transform: translateY(-10vh); }
-            to { transform: translateY(100vh); }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Happy 5th Anniversary Bubby</h1>
-    <button class="button" onclick="startEmojiRain()">How you make me feel</button>
-    <button class="button" onclick="location.href='text.html'">Click here</button>
+  <div class="birthday-container">
+    <h1 class="birthday-text">🎉 Happy Birthday! 🎂</h1>
+    <div class="hearts">
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+    </div>
+  </div>
 
-    <script>
-        function startEmojiRain() {
-            const emojis = ["😘", "💞", "🦋", "🤍", "🎗️", "🩵", "🫧", "🎀", "🥺", "🌸", "🫀", "💘", "🌹", "💋"];
-            setInterval(() => {
-                const emoji = document.createElement("div");
-                emoji.className = "emoji";
-                emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-                document.body.appendChild(emoji);
+  <div class="pull-tab" onclick="toggleMessage()">
+    <span>🎁 Pull Me</span>
+  </div>
 
-                emoji.style.left = Math.random() * 100 + "vw";
-                emoji.style.animationDuration = Math.random() * 3 + 5 + "s"; 
-                setTimeout(() => { emoji.remove(); }, 8000);
-            }, 300);
-        }
-    </script>
+  <div class="hidden-message" id="messageBox">
+    <p id="customMessage">Wishing you a day filled with love, joy, and cake! 🎈🎉</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
