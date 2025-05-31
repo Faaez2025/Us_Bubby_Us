@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #ffe6f0;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.birthday-container {
+  margin-top: 80px;
+}
+
+.birthday-text {
+  font-size: 3em;
+  color: #ff69b4;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.hearts {
+  margin-top: 20px;
+  position: relative;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation: float 4s infinite;
+  transform: rotate(45deg);
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+.heart:nth-child(1) {
+  left: 40%;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.heart:nth-child(3) {
+  left: 60%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% { top: 100px; opacity: 1; }
+  100% { top: -200px; opacity: 0; }
+}
+
+.pull-tab {
+  background: #ffb6c1;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 0 0 15px 15px;
+  width: 120px;
+  margin: 50px auto 0;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.pull-tab:hover {
+  transform: scale(1.05);
+}
+
+.hidden-message {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff0f5;
+  transition: max-height 0.6s ease-in-out, padding 0.4s ease;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+}
+
+.hidden-message.open {
+  max-height: 300px;
+  padding: 20px;
+}
+
+.hidden-message p {
+  font-size: 1.3em;
+  color: #ff1493;
+  margin: 0;
+}
